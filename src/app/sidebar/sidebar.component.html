@@ -1,0 +1,7 @@
+<div class="sidebar">
+  <img [src]="'assets/images/' + photo" class="sidebar__photo" />
+  <h2 class="sidebar__auteur">{{ auteur }}</h2>
+  <p class="sidebar__biographie">{{ biographie }}</p>
+  <p class="sidebar__biographie--bold">{{ favAnimal }}</p>
+  <input [(ngModel)]="auteur" class="sidebar__formulaire"/>
+</div>

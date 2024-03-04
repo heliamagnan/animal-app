@@ -1,0 +1,29 @@
+/* CONVENTION DE NOMMAGE BEM */
+
+$mainColor: #DDFFDD;
+$textColor: #333333;
+
+.sidebar{
+  width: 200px;
+  background-color: $mainColor;
+  padding: 10px;
+  border-radius: 6px;
+
+  &__photo{
+    width: 100%;
+  }
+
+  &__auteur{
+    color: $textColor;
+    font-size: 24px;
+  }
+
+  &__biographie{
+    font-size: 16px;
+    color: $textColor;
+
+    &--bold{
+      font-weight: 800;
+    }
+  }
+}

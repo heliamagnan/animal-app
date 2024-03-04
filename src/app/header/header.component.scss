@@ -1,0 +1,12 @@
+.header{
+  display: flex;
+
+  &__title{
+    padding-top: 15px;
+  }
+
+  &__logo{
+    width: 100px;
+    height: auto;
+  }
+}
