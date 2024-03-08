@@ -2,6 +2,8 @@
   <h2>{{ title }}</h2>
   <p>{{ description }}</p>
   <img [src]="'assets/images/' + image" [alt]="title">
-  <button (click)="onClickLikesButton()">Like</button>
+  <div>
+    <button (click)="onClickLikesButton()">{{ button }}</button>
+  </div>
   <p>Likes : {{ likes }}</p>
 </div>
