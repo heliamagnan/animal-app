@@ -11,9 +11,16 @@ export class SectionComponent {
   @Input() description: string = '';
   @Input() image: string = '';
   @Input() likes: number = 0;
+  @Input() button: string = 'Like';
 
   //méthodes
   onClickLikesButton(){
-    this.likes++;
+    if (this.likes === 0) {
+      this.likes = 1;
+      this.button = 'Dislike';
+    } else {
+      this.likes = 0;
+      this.button = 'Like';
+    }
   }
 }
