@@ -7,6 +7,29 @@
   background-color: #fff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease-in-out;
+  position: relative;
+  display: inline-block;
+  width: 350px;
+  height: 400px;
+
+  .tooltip {
+    position: absolute;
+    top: 50%; // Ajustez la position verticale selon vos besoins
+    left: 50%; // Centre l'infobulle horizontalement
+    transform: translateX(-50%); // Décale l'infobulle de moitié de sa largeur vers la gauche pour la centrer
+    background-color: rgba(0, 0, 0, 0.7); // Couleur de fond de l'infobulle
+    color: #fff; // Couleur du texte de l'infobulle
+    padding: 5px 10px; // Espacement interne de l'infobulle
+    border-radius: 5px; // Bord arrondi de l'infobulle
+    z-index: 999; // Place l'infobulle au-dessus de la carte
+    white-space: nowrap; // Empêche le texte de se couper sur plusieurs lignes
+    opacity: 0; // Masque l'infobulle initialement
+    transition: opacity 0.3s ease; // Animation de transition pour l'opacité
+  }
+
+  &:hover .tooltip {
+    opacity: 1; // Affiche l'infobulle au survol
+  }
 
   &:hover {
     transform: scale(1.05);
@@ -23,11 +46,31 @@
   }
 
   img {
-    max-width: 100%;
+    width: 80%;
     height: 170px;
     margin-top: 15px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     object-fit: cover;
   }
+}
+
+
+/* Style pour le bouton "Like" */
+.section button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 150px;
+  margin-top: 10px;
+}
+
+/* Style pour le bouton "Like" au survol */
+.section button:hover {
+  background-color: #0056b3;
 }

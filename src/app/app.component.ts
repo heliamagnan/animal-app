@@ -1,4 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
+
+//import du component parent pour utiliser le décorateur @ViewChild
+import { ColorSelectorComponent } from './color-selector/color-selector.component';
 
 @Component({
   selector: 'app-root',
@@ -6,10 +9,30 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  //attribut
-  sections = [
-    { title: 'Chien', description: 'Image de chien', image: 'image1.jpg', likes:0 },
-    { title: 'Chat', description: 'Image de chat', image: 'image2.jpg', likes:0 },
-    { title: 'Oiseau', description: 'Image d\'oiseau', image: 'image3.jpg', likes:0 },
-  ];
+
+  //decorateur viewchild
+  @ViewChild(ColorSelectorComponent) colorSelector!: ColorSelectorComponent;
+  modeDeCouleur: string = '';
+  modeDeCouleurTxt: string = '';
+
+  ngAfterViewInit() {
+    //récupère la couleur à l'initialisation
+    if (this.colorSelector) {
+      //affiche la couleur de l'élement parent
+      this.modeDeCouleur = this.colorSelector.selectedColor;
+      this.modeDeCouleurTxt = this.colorSelector.txtColor;
+    }
+  }
+
+  //est appellé à chaque changement de couleur dans le component enfant
+  onColorChanged(color: string) {
+    this.modeDeCouleur = color;
+    if (color == 'white'){
+      this.modeDeCouleurTxt = '#252525';
+      console.log(this.modeDeCouleurTxt);
+    } else {
+      this.modeDeCouleurTxt = 'white';
+      console.log(this.modeDeCouleurTxt);
+    }
+  }
 }

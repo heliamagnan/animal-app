@@ -1,0 +1,49 @@
+/* Style pour le conteneur principal */
+.color-selector-container {
+  font-family: Arial, sans-serif;
+  width: 300px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Style pour le label */
+label {
+  display: block;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+/* Style pour la liste déroulante */
+select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-bottom: 20px;
+  width: 200px;
+}
+
+/* Style pour la boîte d'affichage de la couleur */
+.color-display {
+  padding: 20px;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+/* Style pour le message */
+p {
+  font-size: 18px;
+}
+
+/* Style pour le mode sombre */
+.color-display.dark-mode {
+  color: #fff;
+}
+
+.color-display.dark-mode p {
+  color: #fff;
+}

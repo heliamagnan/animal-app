@@ -1,7 +1,7 @@
-<app-header></app-header>
-<div class="section-flex">
-  <div *ngFor="let section of sections">
-    <app-section [title]="section.title" [description]="section.description" [image]="section.image" [likes]="section.likes"></app-section>
-  </div>
-  <app-sidebar></app-sidebar>
+<div [style.background-color]="modeDeCouleur" [style.color]="modeDeCouleurTxt" class="mainDiv">
+  <app-header></app-header>
+  <app-color-selector (colorChanged)="onColorChanged($event)"></app-color-selector>
+  <router-outlet></router-outlet>
+
+  <app-footer></app-footer>
 </div>

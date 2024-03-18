@@ -1,0 +1,11 @@
+<div *ngIf="!isLoggedIn; else welcomeMessage">
+  <form (ngSubmit)="login()">
+    <input type="text" [(ngModel)]="username" name="username" placeholder="Username">
+    <button type="submit">Login</button>
+  </form>
+</div>
+
+<!-- remplace le contenu du div avec le *ngIf grâce à la condition "else" -->
+<ng-template #welcomeMessage>
+  <p>Bienvenue, {{ username }} !</p>
+</ng-template>

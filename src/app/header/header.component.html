@@ -1,4 +1,12 @@
 <div class="header">
   <img [src]="'assets/images/' + logo" [alt]="title" class="header__logo"/>
   <h1 class="header__title">{{ title }}</h1>
+
+  <nav>
+    <ul>
+      <li><a routerLink="/" routerLinkActive="active" ariaCurrentWhenActive="page">Accueil</a></li>
+      <li><a routerLink="/about" routerLinkActive="active" ariaCurrentWhenActive="page">À propos</a></li>
+      <li><a routerLink="/billeterie" routerLinkActive="active" ariaCurrentWhenActive="page">Billeterie</a></li>
+    </ul>
+  </nav>
 </div>

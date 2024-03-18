@@ -1,0 +1,17 @@
+<!-- color-selector.component.html -->
+<div>
+  <label for="colorSelector">Changer le mode de couleur :</label>
+  <select id="colorSelector" [(ngModel)]="selectedColor" (change)="changeColor(selectedColor)">
+    <option value="white">Mode Clair</option>
+    <option value="#252525">Mode Sombre</option>
+  </select>
+
+  <div [ngStyle]="{ 'background-color': selectedColor, 'color': txtColor }" class="color-display" class="bordered" *ngIf="selectedColor == 'white'; else darkMessage">
+    <p>Mode Clair sélectionné !</p>
+  </div>
+</div>
+
+<!-- remplace le contenu du div avec le *ngIf grâce à la condition "else" -->
+<ng-template #darkMessage>
+  <p>Mode Sombre sélectionné !</p>
+</ng-template>

@@ -8,19 +8,20 @@ $textColor: #333333;
   background-color: $mainColor;
   padding: 10px;
   border-radius: 6px;
+  color: $textColor !important;
 
   &__photo{
     width: 100%;
   }
 
   &__auteur{
-    color: $textColor;
+    color: $textColor !important;
     font-size: 24px;
   }
 
   &__biographie{
     font-size: 16px;
-    color: $textColor;
+    color: $textColor !important;
 
     &--bold{
       font-weight: 800;

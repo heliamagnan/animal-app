@@ -1,7 +1,34 @@
+
+
+<!--
 <div class="sidebar">
   <img [src]="'assets/images/' + photo" class="sidebar__photo" />
   <h2 class="sidebar__auteur">{{ auteur }}</h2>
   <p class="sidebar__biographie">{{ biographie }}</p>
   <p class="sidebar__biographie--bold">{{ favAnimal }}</p>
   <input [(ngModel)]="auteur" class="sidebar__formulaire"/>
+</div> -->
+
+<div class="sidebar">
+  <h2>Profil</h2>
+  <!-- Utilisation de la directive *ngIf pour afficher le contenu si l'utilisateur est connecté -->
+  <div *ngIf="(isLoggedIn$ | async)">
+    <div *ngIf="(username$ | async) == 'Hélia'; else helloMessage">
+      <img [src]="'assets/images/' + photo" class="sidebar__photo" />
+      <h2 class="sidebar__auteur">{{ auteur }}</h2>
+      <p class="sidebar__biographie">{{ biographie }}</p>
+      <p class="sidebar__biographie--bold">{{ favAnimal }}</p>
+    </div>
+  </div>
+  <!-- Utilisation de la directive *ngIf pour afficher un message si l'utilisateur n'est pas connecté -->
+  <div *ngIf="!(isLoggedIn$ | async)">
+    <p>Veuillez vous connecter pour afficher les détails de l'utilisateur.</p>
+    <!-- Autres contenus si l'utilisateur n'est pas connecté -->
+  </div>
 </div>
+
+<ng-template #helloMessage>
+  <!-- Utilisation de la directive async pipe pour extraire la valeur actuelle de l'observable -->
+  <p>Bienvenue, {{ (username$ | async) }}!</p>
+  <!-- Autres détails de l'utilisateur -->
+</ng-template>

@@ -1,0 +1,35 @@
+/* Style pour le formulaire */
+form {
+  display: flex;
+  flex-direction: row; /* Affichage en ligne des éléments */
+  align-items: center; /* Alignement vertical au centre */
+  width: 200px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/* Style pour le champ de saisie */
+input[type="text"] {
+  flex: 1; /* Le champ de saisie prend tout l'espace disponible */
+  padding: 10px;
+  margin-right: 10px; /* Marge à droite pour séparer les éléments */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* Style pour le bouton de soumission */
+button[type="submit"] {
+  padding: 10px 20px; /* Ajout de remplissage vertical pour correspondre au champ de saisie */
+  background-color: #DDFFDD;
+  color: #000;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button[type="submit"]:hover {
+  background-color: #CCEECC;
+}

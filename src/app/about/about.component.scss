@@ -1,0 +1,42 @@
+/* Style pour le conteneur principal */
+.about-container {
+  font-family: Arial, sans-serif;
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 30px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Style pour les titres */
+h2, h3 {
+  color: #333;
+}
+
+/* Style pour les paragraphes */
+p {
+  margin-bottom: 15px;
+}
+
+/* Style pour le titre principal */
+h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* Style pour les sous-titres */
+h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+/* Style pour les liens */
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}

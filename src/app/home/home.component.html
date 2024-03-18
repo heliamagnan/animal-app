@@ -1,0 +1,9 @@
+<app-login></app-login>
+
+  <div class="section-flex" >
+    <div *ngFor="let section of sections">
+      <app-section [title]="section.title" [description]="section.description" [image]="section.image" [likes]="section.likes"></app-section>
+    </div>
+  </div>
+  <app-sidebar></app-sidebar>
+  <app-liste-animaux></app-liste-animaux>

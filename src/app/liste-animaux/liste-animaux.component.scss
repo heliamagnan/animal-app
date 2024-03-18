@@ -1,0 +1,26 @@
+.listAnimaux{
+  margin-top: 170px;
+}
+
+/* Style pour la liste d'animaux */
+ul {
+  list-style-type: none; /* Supprime les puces de la liste */
+  padding: 0;
+  margin: 0;
+}
+
+/* Style pour chaque élément de la liste */
+li {
+  padding: 10px;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  transition: background-color 0.3s ease; /* Animation de transition */
+  color: #000000 !important;
+}
+
+/* Style pour le survol de la liste */
+li:hover {
+  background-color: #e0e0e0; /* Changement de couleur au survol */
+  cursor: pointer; /* Curseur en main pour indiquer que l'élément est cliquable */
+}
