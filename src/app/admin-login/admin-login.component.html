@@ -1,0 +1,9 @@
+<p>admin-login works!</p>
+<h1>Connexion</h1>
+    <form #loginForm="ngForm" (ngSubmit)="login(loginForm)">
+      <label for="username">Nom d'utilisateur:</label>
+      <input type="text" id="username" name="username" ngModel required> <!-- NE SURTOUT PAS OUBLIER LES NGMODEL DANS LES INPUT -->
+      <label for="password">Mot de passe:</label>
+      <input type="password" id="password" name="password" ngModel required>
+      <button type="submit">Se connecter</button>
+    </form>

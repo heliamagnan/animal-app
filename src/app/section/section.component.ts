@@ -7,6 +7,7 @@ import { AnimalService } from '../animal-service.service';
   styleUrls: ['./section.component.scss']
 })
 export class SectionComponent implements OnInit {
+  @Input() id: string = '';
   @Input() title: string = '';
   @Input() description: string = '';
   @Input() image: string = '';

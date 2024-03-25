@@ -1,0 +1,8 @@
+<div *ngIf="isLoggedIn">
+  <h1>Espace d'administration</h1>
+  <!-- Contenu de l'administration -->
+  <button (click)="logout()">Déconnexion</button>
+</div>
+<div *ngIf="!isLoggedIn">
+  <p>Vous n'êtes pas autorisé à accéder à cette page. Veuillez vous connecter en tant qu'administrateur.</p>
+</div>

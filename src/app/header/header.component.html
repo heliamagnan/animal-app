@@ -4,9 +4,10 @@
 
   <nav>
     <ul>
-      <li><a routerLink="/" routerLinkActive="active" ariaCurrentWhenActive="page">Accueil</a></li>
+      <li><a routerLink="/" routerLinkActive="active" ariaCurrentWhenActive="page" [routerLinkActiveOptions]="{ exact: true }">Accueil</a></li>
       <li><a routerLink="/about" routerLinkActive="active" ariaCurrentWhenActive="page">À propos</a></li>
       <li><a routerLink="/billeterie" routerLinkActive="active" ariaCurrentWhenActive="page">Billeterie</a></li>
+      <li><a routerLink="/admin" routerLinkActive="active" ariaCurrentWhenActive="page">Admin</a></li>
     </ul>
   </nav>
 </div>

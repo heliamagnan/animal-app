@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-billeterie',
@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrl: './billeterie.component.scss'
 })
 export class BilleterieComponent {
+
+  categories = [
+    { title: 'Adulte', price: 20 },
+    { title: 'Enfant', price: 10 }
+  ];
 
 }

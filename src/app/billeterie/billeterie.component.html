@@ -1,1 +1,6 @@
-<p>billeterie works!</p>
+<h2>Billeterie</h2>
+<div class="category-flex">
+  <div *ngFor="let category of categories">
+    <app-billet [title]='category.title' [price]='category.price'></app-billet>
+  </div>
+</div>
