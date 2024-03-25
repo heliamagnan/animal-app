@@ -23,6 +23,9 @@ import { BilleterieComponent } from './billeterie/billeterie.component';
 import { AdminComponent } from './admin/admin.component';
 import { AdminLoginComponent } from './admin-login/admin-login.component';
 import { BilletComponent } from './billet/billet.component';
+import { WeatherComponent } from './weather/weather.component';
+import { WeatherResolver } from "./weather-resolver.service";
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -42,15 +45,18 @@ import { BilletComponent } from './billet/billet.component';
     AdminComponent,
     AdminLoginComponent,
     BilletComponent,
+    WeatherComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [
     UserService,
+    WeatherResolver,
   ],
   bootstrap: [AppComponent]
 })

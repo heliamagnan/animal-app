@@ -12,6 +12,10 @@ import { AuthGuard } from "./acces-admin.guard";
 import { AdminLoginComponent } from "./admin-login/admin-login.component";
 //import { SingleAnimalComponent } from "./single-animal/single-animal.component";
 
+//weather api
+import { WeatherComponent } from './weather/weather.component';
+import { WeatherResolver } from './weather-resolver.service';
+
 const routes: Routes = [
   //on ajoute les routes ici
   { path: '', component: HomeComponent },
@@ -20,6 +24,7 @@ const routes: Routes = [
   { path: 'admin', component: AdminComponent, canActivate: [AuthGuard] },
   { path: 'login', component: AdminLoginComponent },
   // { path: 'animal/:id', component: SingleAnimalComponent },
+  { path: 'weather', component: WeatherComponent, resolve: { weatherData: WeatherResolver } },
 ];
 
 @NgModule({
